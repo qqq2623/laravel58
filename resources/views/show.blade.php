@@ -1,0 +1,9 @@
+<!doctype html>
+
+
+        {{--{{$cookies}}--}}
+
+
+
+
+{{$session}}

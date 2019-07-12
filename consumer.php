@@ -4,8 +4,7 @@ $exchangeName = "tradeExchange"; //路由
 
 $routeKey = "trade";
 
-$queueName = "";
-
+$queueName = "1111111111111";
 
 
 

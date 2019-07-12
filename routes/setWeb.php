@@ -38,3 +38,11 @@ Route::any("queue" , function(){
 	\App\Jobs\QueueJob::dispatch($userInfo)->onQueue("{zhangyu}");
 	echo "我完成了";
 });
+
+
+Route::any("redis" , function(){
+	 Redis::set("zhangyu" ,  "111111");
+
+	$a = Redis::get("zhangyu");
+	var_dump($a);die;
+});

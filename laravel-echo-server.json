@@ -4,9 +4,7 @@
 	"clients": [],
 	"database": "redis",
 	"databaseConfig": {
-		"redis": {
-          "port":6479
-        },
+		"redis": {},
 		"sqlite": {
 			"databasePath": "/database/laravel-echo-server.sqlite"
 		}

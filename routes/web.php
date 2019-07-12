@@ -49,3 +49,6 @@ Route::prefix('admin')->group(function(){
 //});
 
 Route::view("news" , "news");
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

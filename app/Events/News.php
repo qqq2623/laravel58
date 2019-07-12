@@ -14,12 +14,15 @@ class News implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-	private $news;
+	public $news;
     /**
      * Create a new event instance.
      *
      * @return void
      */
+
+//	public $broadcastQueue = 'zhangyu';
+
     public function __construct($news)
     {
         $this->news = $news;

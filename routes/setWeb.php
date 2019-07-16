@@ -40,9 +40,10 @@ Route::any("queue" , function(){
 });
 
 
-Route::any("redis" , function(){
-	 Redis::set("zhangyu" ,  "111111");
-
-	$a = Redis::get("zhangyu");
-	var_dump($a);die;
+Route::any("amqp", function () {
+	$info = ['1111', '222222'];
+	BrokerSender::send($info, BrokerQueueConfig::$test);
+//	$a = Redis::get("zhangyu");
+	var_dump($info);
+	die;
 });

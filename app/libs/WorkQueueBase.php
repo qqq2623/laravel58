@@ -1,6 +1,7 @@
 <?php
 
 use PhpAmqpLib\Message\AMQPMessage;
+
 /**
  * User: 张宇<${userEmail}>
  * Date: 2019/7/15

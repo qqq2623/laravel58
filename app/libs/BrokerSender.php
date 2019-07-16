@@ -1,5 +1,6 @@
 <?php
 use PhpAmqpLib\Message\AMQPMessage;
+
 /**
  * User: 张宇<${userEmail}>
  * Date: 2019/7/15
@@ -7,6 +8,7 @@ use PhpAmqpLib\Message\AMQPMessage;
  */
 class BrokerSender {
 	const DELIVERY_MODE = 2;
+
 	/**
 	 * 发送消息
 	 *
@@ -17,7 +19,7 @@ class BrokerSender {
 	 *
 	 * @throws Exception
 	 */
-	public function send(array $info, array $config) {
+	public static function send(array $info, array $config) {
 		//检查参数
 		if (empty($config['queueName'])) {
 			throw new Exception("队列名称不能为空");

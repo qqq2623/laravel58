@@ -1,7 +1,23 @@
 <?php
 
-$exchangeName = "tradeExchange"; //路由
+use App\libs\WorkQueueBase;
+require_once __DIR__ . "/config/BrokerQueueConfig.php";
+require_once __DIR__.'/vendor/autoload.php';
 
-$routeKey = "trade";
+class Consumer extends WorkQueueBase{
+	protected function getQueueConfig() {
+		// TODO: Implement getQueueConfig() method.
+		return BrokerQueueConfig::$test;
+	}
 
-//$queueName = "111";
+	protected function doBusiness($msgBody) {
+		// TODO: Implement doBusiness() method.
+		$msgBody = json_decode($msgBody , 1);
+		var_dump($msgBody);
+		echo "消费完成";
+	}
+}
+
+
+$worker = new Consumer();
+$worker->run();

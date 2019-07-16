@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a697bdca-3b82-46bb-a886-0c2303565dab" name="默认的" comment="amqp  得加一下类库">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/AMQPBrokerUtil.php" afterPath="$PROJECT_DIR$/app/libs/AMQPBrokerUtil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/BrokerSender.php" afterPath="$PROJECT_DIR$/app/libs/BrokerSender.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/libs/WorkQueueBase.php" afterPath="$PROJECT_DIR$/app/libs/WorkQueueBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/BrokerQueueConfig.php" afterPath="$PROJECT_DIR$/config/BrokerQueueConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/setWeb.php" afterPath="$PROJECT_DIR$/routes/setWeb.php" />
-    </list>
+    <list default="true" id="a697bdca-3b82-46bb-a886-0c2303565dab" name="默认的" comment="amqp  ok 但是现在出了一个问题 ， docker下的 rabbitmq 老是挂掉，可能是可用内存不足造成的" />
     <ignored path="laravel58.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -91,8 +83,8 @@
       <file leaf-file-name="Consumer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Consumer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.4827585">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state vertical-scroll-proportion="-15.172414">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -133,28 +125,48 @@
       <file leaf-file-name="AMQPBrokerUtil.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/libs/AMQPBrokerUtil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.413794">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state vertical-scroll-proportion="-21.448277">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AMQPStreamConnection.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AMQPStreamConnection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Connection/AMQPStreamConnection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.345">
+            <state vertical-scroll-proportion="-9.5172415">
               <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorkQueueBase.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WorkQueueBase.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/libs/WorkQueueBase.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.0">
-              <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+            <state vertical-scroll-proportion="1.3776722">
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AMQPChannel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Channel/AMQPChannel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.379311">
+              <caret line="790" column="71" selection-start-line="790" selection-start-column="71" selection-end-line="790" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Protocol080.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Helper/Protocol/Protocol080.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.9310346">
+              <caret line="660" column="20" selection-start-line="660" selection-start-column="20" selection-end-line="660" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -206,7 +218,7 @@
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.793103">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -317,13 +329,13 @@
         <option value="$PROJECT_DIR$/app/amqp/BrokerSender.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-        <option value="$PROJECT_DIR$/app/libs/WorkQueueBase.php" />
         <option value="$PROJECT_DIR$/app/libs/BrokerSender.php" />
         <option value="$PROJECT_DIR$/config/BrokerQueueConfig.php" />
         <option value="$PROJECT_DIR$/routes/setWeb.php" />
         <option value="$PROJECT_DIR$/app/libs/AMQPBrokerUtil.php" />
         <option value="$PROJECT_DIR$/consumer.php" />
         <option value="$PROJECT_DIR$/Consumer.php" />
+        <option value="$PROJECT_DIR$/app/libs/WorkQueueBase.php" />
       </list>
     </option>
   </component>
@@ -756,7 +768,19 @@
       <option name="project" value="LOCAL" />
       <updated>1563255219045</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="amqp  ok">
+      <created>1563263115346</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1563263115346</updated>
+    </task>
+    <task id="LOCAL-00016" summary="amqp  ok 但是现在出了一个问题 ， docker下的 rabbitmq 老是挂掉，可能是可用内存不足造成的">
+      <created>1563268712089</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1563268712089</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -778,7 +802,7 @@
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40863788" sideWeight="0.511242" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2955032" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.046511628" sideWeight="0.48875803" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3875969" sideWeight="0.48875803" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.251606" sideWeight="0.5271829" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="消息" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890365" sideWeight="0.496788" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -826,7 +850,9 @@
     <MESSAGE value="amqp 未完" />
     <MESSAGE value="amqp  需要实践一下！" />
     <MESSAGE value="amqp  得加一下类库" />
-    <option name="LAST_COMMIT_MESSAGE" value="amqp  得加一下类库" />
+    <MESSAGE value="amqp  ok" />
+    <MESSAGE value="amqp  ok 但是现在出了一个问题 ， docker下的 rabbitmq 老是挂掉，可能是可用内存不足造成的" />
+    <option name="LAST_COMMIT_MESSAGE" value="amqp  ok 但是现在出了一个问题 ， docker下的 rabbitmq 老是挂掉，可能是可用内存不足造成的" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -857,20 +883,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045924224">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Broadcasting/Channel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.103448">
@@ -1123,7 +1135,7 @@
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.793103">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1206,14 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/BrokerQueueConfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.137931">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.103448">
@@ -1222,34 +1226,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Consumer.php">
+    <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Connection/AMQPStreamConnection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.4827585">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state vertical-scroll-proportion="-9.5172415">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/WorkQueueBase.php">
+    <entry file="file://$PROJECT_DIR$/config/BrokerQueueConfig.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.0">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
+        <state vertical-scroll-proportion="-4.137931">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Consumer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.172414">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/libs/AMQPBrokerUtil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.413794">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state vertical-scroll-proportion="-21.448277">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Connection/AMQPStreamConnection.php">
+    <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Helper/Protocol/Protocol080.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.345">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state vertical-scroll-proportion="-7.9310346">
+          <caret line="660" column="20" selection-start-line="660" selection-start-column="20" selection-end-line="660" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/php-amqplib/php-amqplib/PhpAmqpLib/Channel/AMQPChannel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.379311">
+          <caret line="790" column="71" selection-start-line="790" selection-start-column="71" selection-end-line="790" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/WorkQueueBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3776722">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
           <folding />
         </state>
       </provider>

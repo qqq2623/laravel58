@@ -39,19 +39,15 @@
         "psr-4": {
             "App\\": "app/"
         },
-      "files": [
-        "app/libs/AMQPBrokerUtil.php",
-        "app/libs/BrokerSender.php",
-        "app/libs/WorkQueueBase.php"
-      ],
         "classmap": [
             "database/seeds",
-          "database/factories",
+          "database/factories"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+          "Tests\\": "tests/",
+          "App\\libs\\": "app/libs/"
         }
     },
     "minimum-stability": "dev",

@@ -1,5 +1,5 @@
 <?php
-
+namespace App\libs;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 /**
@@ -12,9 +12,9 @@ class AMQPBrokerUtil {
 	private static $conn = null;
 
 	private static $conn_args = [
-		'host'     => '127.0.0.1',
-		'port'     => '5672',
-		'login'    => 'guest',
+		'host'     => '119.3.109.0',
+		'port'     => 5672,
+		'user'     => 'guest',
 		'password' => 'guest',
 		'vhost'    => '/',
 	];
@@ -28,7 +28,8 @@ class AMQPBrokerUtil {
 	public static function getConnection() {
 		if (is_null(self::$conn)) {
 			$config     = self::$conn_args;
-			self::$conn = new AMQPStreamConnection($config);
+//			var_dump($config);die;
+			self::$conn = new AMQPStreamConnection($config['host'], $config['port'], $config['user'], $config['password'], $config['vhost']);
 
 		}
 		return self::$conn;

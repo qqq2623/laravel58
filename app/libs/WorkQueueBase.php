@@ -56,9 +56,8 @@ abstract class WorkQueueBase {
 				//抛出异常
 			}
 
-			var_dump($msg);
-			die;
-//			$channel->basic_ack($msg->delivery_info['delivery_tag'] , )
+//			var_dump($msg->delivery_info);
+			$channel->basic_ack($msg->delivery_info['delivery_tag']);
 		};
 		$channel->basic_qos(null, 1, null);
 		$channel->basic_consume($this->queueName, '', false, false, false, false, $callback);

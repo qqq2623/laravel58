@@ -1,5 +1,6 @@
 <?php
 
+use PhpAmqpLib\Message\AMQPMessage;
 /**
  * User: 张宇<${userEmail}>
  * Date: 2019/7/15
@@ -44,9 +45,33 @@ abstract class WorkQueueBase {
 		//队列持久化
 		//是否排外，既是否一个队列只有一个消费者
 		//是否自动删除
-		//
-//		$channel->queue_declare($this->queueName , false , true , );
+		$channel->queue_declare($this->queueName, false, true, false, false);
 
+		$callback = function ($msg) use ($channel) {
+			try {
+				$this->doBusiness($msg->body);
+			} catch (\Exception $e) {
+				//TODO
+				//抛出异常
+			}
+
+			var_dump($msg);
+			die;
+//			$channel->basic_ack($msg->delivery_info['delivery_tag'] , )
+		};
+		$channel->basic_qos(null, 1, null);
+		$channel->basic_consume($this->queueName, '', false, false, false, false, $callback);
+
+		while (1) {
+			try {
+				$channel->wait();
+			} catch (\Exception $e) {
+				//抛出异常
+				//TODO
+				echo "有异常";
+				exit();
+			}
+		}
 	}
 
 	/**
@@ -59,4 +84,9 @@ abstract class WorkQueueBase {
 	 * @return mixed
 	 */
 	abstract protected function doBusiness($msgBody);
+
+	public function __destruct() {
+		// TODO: Implement __destruct() method.
+		AMQPBrokerUtil::getCloseConnection();
+	}
 }

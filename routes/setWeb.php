@@ -48,3 +48,9 @@ Route::any("amqp", function () {
 	var_dump($info);
 	die;
 });
+
+Route::any("redis", function () {
+	$a = Redis::get("zhangyu");
+	var_dump($a);
+	die;
+});

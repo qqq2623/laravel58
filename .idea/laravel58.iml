@@ -199,7 +199,6 @@
           <root url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://F:/六星教育/swoole特训班1902期-Peter老师/swoole基础/01.swoole特训班-环境安装、快速入门/素材/ide-helper-master/ide-helper-master" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/barryvdh/laravel-debugbar" />
@@ -289,7 +288,6 @@
           <root url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
           <root url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
           <root url="file://$MODULE_DIR$/vendor/webmozart/assert" />
-          <root url="file://F:/六星教育/swoole特训班1902期-Peter老师/swoole基础/01.swoole特训班-环境安装、快速入门/素材/ide-helper-master/ide-helper-master" />
         </SOURCES>
       </library>
     </orderEntry>

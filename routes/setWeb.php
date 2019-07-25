@@ -53,3 +53,6 @@ Route::any("redis", function () {
 	var_dump($a);
 	die;
 });
+Route::any("/im" , function(){
+	return view("im");
+});

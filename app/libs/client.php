@@ -6,12 +6,11 @@
  */
 
 
-$client = new Swoole\Client(SWOOLE_SOCK_TCP, SWOOLE_ASYNC);
+$client = new Swoole\Client(SWOOLE_SOCK_TCP);
 
 $client->connect('119.3.109.0', 9800);
-//$client->on('connect' , function($client , ){
-//	$client->send("111112222");
-//});
+
+$client->send("111112222");
 
 echo $client->recv();
 

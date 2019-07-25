@@ -178,6 +178,7 @@ return [
 	    //第三方插件
 	    Barryvdh\Debugbar\ServiceProvider::class,
 	    Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+	    VladimirYuldashev\LaravelQueueRabbitMQ\LaravelQueueRabbitMQServiceProvider::class,
 
     ),
 

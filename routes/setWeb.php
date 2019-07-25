@@ -20,9 +20,6 @@ Route::resource("resource" , "ResourceController");
 
 
 Route::any("show" , "IndexController@show");
-
-
-
 Route::any("enter" , "AdminController@enter");
 
 
@@ -43,8 +40,9 @@ Route::any("queue" , function(){
 
 Route::any("amqp", function () {
 	$info = ['1111', '222222'];
-	BrokerSender::send($info, BrokerQueueConfig::$test);
+	BrokerSender::send($info, config('amqp.queue.queueName'));
 //	$a = Redis::get("zhangyu");
 	var_dump($info);
 	die;
 });
+Route::any("amqp" , "IndexController@index");

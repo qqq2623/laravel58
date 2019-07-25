@@ -21,12 +21,12 @@ abstract class WorkQueueBase {
 	protected $connection;
 
 	public function __construct() {
-		$config = $this->getQueueConfig();
-		if (empty($config['queueName'])) {
+		$queueName = $this->getQueueConfig();
+//		var_dump($queueName);die;
+		if (empty($queueName)) {
 			throw new Exception("队列名称不能为空");
 		}
-
-		$this->queueName  = $config['queueName'];
+		$this->queueName  = $queueName;
 		$this->connection = AMQPBrokerUtil::getConnection();
 	}
 

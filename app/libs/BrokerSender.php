@@ -20,20 +20,20 @@ class BrokerSender {
 	 *
 	 * @throws Exception
 	 */
-	public static function send(array $info, array $config) {
+	public static function send(array $info, string $queueName) {
 		//检查参数
-		if (empty($config['queueName'])) {
+		if (empty($queueName)) {
 			throw new Exception("队列名称不能为空");
 		}
 		$conn    = AMQPBrokerUtil::getConnection();
 		$channel = $conn->channel();
 
-		$channel->queue_declare($config['queueName'], false, true, false, false);
+		$channel->queue_declare($queueName, false, true, false, false);
 		$msg = new AMQPMessage(json_encode($info), [
 			'delivery_mode' => self::DELIVERY_MODE,
 		]);
 
-		$channel->basic_publish($msg, '', $config['queueName']);
+		$channel->basic_publish($msg, '', $queueName);
 		$channel->close();
 	}
 }

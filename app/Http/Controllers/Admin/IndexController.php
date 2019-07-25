@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Jobs\rabbitQueue;
 use App\Model\AdminUser;
 use App\Model\Role;
 use Illuminate\Http\Request;
@@ -36,15 +37,12 @@ class IndexController extends Controller
 	}
 
 	public function index(){
-//		var_dump(11111);die;
-//		return redirect()->route("index.show");
+		$msg = "111111";
+		$this->dispatch(new rabbitQueue($msg));
+		echo "OK";
 	}
 
 	public function queue(){
-
-
-
-
 	    $user = "我是队列";
 	    QueueJob::dispatch($user);
 	    echo "我完成了";

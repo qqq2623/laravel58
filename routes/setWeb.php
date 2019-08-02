@@ -56,3 +56,8 @@ Route::any("redis", function () {
 Route::any("/im" , function(){
 	return view("im");
 });
+
+Route::any("/wechat", function () {
+	$user = session('wechat.oauth_user.default');
+	dd($user);
+})->middleware('wechat.oauth');

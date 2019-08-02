@@ -27,12 +27,12 @@ $app = new Illuminate\Foundation\Application( //实例化应用程序
 */
 //底层原理中的契约 ---> 比如抽象类（接口）和具体实现
 //单例绑定
-$app->singleton(
+$app->singleton(//web
     Illuminate\Contracts\Http\Kernel::class, //其实是实现了下面的那个类
     App\Http\Kernel::class
 );
 
-$app->singleton(
+$app->singleton(//artisan
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
